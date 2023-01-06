@@ -10,6 +10,7 @@
     <button type="submit">Submit</button>
 </form>
 <?php
+require_once("consti.php");
         if (!isset($_GET['langID']))
           $lang = 'en';
         else
@@ -17,5 +18,7 @@
   
         include('locale/'. $lang . '.php');
         echo $langArray['welcome'];
+
+        echo "<BR><BR>".GREETING;
  
 ?>
